@@ -34,7 +34,19 @@ the next implementation round.
    generic rules.
 2. Read the referenced code files so every finding is tied to the exact
    component/line that causes it.
-3. Analyze every screenshot thoroughly before writing anything.
+3. Analyze every screenshot thoroughly before writing anything. Run the full
+   per-element sweep — do not skip any category:
+   - Spacing: paddings, margins, gaps — uneven, cramped, floating?
+   - Alignment: off-center, ragged edges, misaligned columns or icons.
+   - Typography: hierarchy, sizes, weights, line-height, contrast, clipping,
+     ellipsis.
+   - Color: palette consistency, contrast ratios, dead zones.
+   - Layout: overlaps, cropped elements, overflow, scroll issues, empty areas.
+   - Component fidelity: does each component match the platform idiom
+     (Material 3 for Android, standard web patterns)?
+   - States: empty, loading, error, disabled, pressed/hover — anything missing
+     or broken?
+   - Requirements fit: does the screen match what the user asked for?
 
 ### Output — structured markdown with ALL of these sections:
 
@@ -119,6 +131,13 @@ what can be improved visually.
 
 ## Rules for BOTH modes
 
+- **REPORT EVERYTHING YOU SEE — nothing is left out.** There is no minimum
+  threshold. No observation is too small: every off-by-a-pixel alignment,
+  every ambiguous state, every unverified assumption, every element that
+  already looks right (those go in DO-NOT-TOUCH or the verdict). Never decide
+  something "isn't worth mentioning" — the main agent makes that call; you
+  only decide what is true. Before finishing, mentally sweep each screenshot
+  region-by-region and confirm every element appears somewhere in your report.
 - Be brutally honest: if an element is off-center, overlaps, clips, or looks
   generic, call it out by name. Precision beats politeness — the developer
   cannot see the screen.

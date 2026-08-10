@@ -90,11 +90,22 @@ optimization, refactoring, and visual verification.
         and if that fails too, report the blocker to the user instead of skipping
         the loop.
 
-   Step 3 — QC round: Call @mimo-eyes via the task tool in QC MODE, passing:
-   - the screenshot file path(s),
-   - the step's brief and the user's original requirements,
-   - the changed code file paths,
-   - the distilled design guidance from loaded skills.
+   Step 3 — QC round: Call @mimo-eyes via the task tool in QC MODE. Structure
+   the task description with EXACTLY this template — every field, every time:
+
+   ```
+   MODE: QC
+   SCREENSHOTS: <paths — one per screen/state changed>
+   FEATURE & BRIEF: <what was built + the step's acceptance criteria>
+   CODE PATHS: <changed files, so it can tie flaws to exact lines>
+   DESIGN LANGUAGE: <condensed from AGENTS.md + loaded skills: palette,
+   typography, spacing, platform idiom>
+   SPECIFIC CONCERNS: <anything you are unsure about — the design-direction
+   check from Step 0, a risky interaction, a pattern you improvised>
+   REMINDER: Report everything you see — no minimum threshold, nothing left
+   out of the output.
+   ```
+
    It returns flaws, exact fixes, an implementation plan, AND decision guidance
    (DECISIONS & TRADEOFFS, DO-NOT-TOUCH) — use the decision guidance to make
    informed calls: apply High-confidence fixes, weigh the alternatives for
@@ -111,11 +122,21 @@ optimization, refactoring, and visual verification.
 
    Step 6 — UX REVIEW: capture the app's CURRENT full state — every screen and
    state built so far (one screenshot per screen/state). Call @mimo-eyes in UX
-   REVIEW MODE with the full set, the overall product brief, and the project's
-   design language. It evaluates the whole experience across screens
-   (consistency audit) and proposes UI/UX improvements — NOT just bug QC.
-   QC was already done per-step; this round is about making the product look
-   great.
+   REVIEW MODE. Structure the task description with EXACTLY this template:
+
+   ```
+   MODE: UX REVIEW
+   SCREENSHOTS: <ALL screens/states the app now has>
+   PRODUCT BRIEF: <what the app is and who it is for>
+   DESIGN LANGUAGE: <condensed from AGENTS.md + loaded skills>
+   REMINDER: Evaluate the whole app as one system. Report everything you see —
+   consistency audit across all screens, then prioritized UI/UX improvements.
+   This is NOT bug QC — QC was already done per-step.
+   ```
+
+   It evaluates the whole experience across screens (consistency audit) and
+   proposes UI/UX improvements — NOT just bug QC. QC was already done per-step;
+   this round is about making the product look great.
 
    Step 7 — APPLY IMPROVEMENTS: implement the top improvements in mimo's
    suggested order. Each improvement that touches visuals goes through the
@@ -135,7 +156,7 @@ optimization, refactoring, and visual verification.
    every session; update it whenever the user's requirements change. Tell
    @mimo-eyes to judge against it.
 
-6. CONTEXT HYGIENE (you run on a free model with limited context):
+6. CONTEXT HYGIENE — mimo gets the full budget; you stay lean elsewhere:
    - Your budget is generous enough for @mimo-eyes to be fully hands-on — do
      NOT trim or lean out mimo interactions. Send full context, expect dense
      reports, and use them.
