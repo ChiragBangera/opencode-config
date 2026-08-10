@@ -1,4 +1,30 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "default_agent": "main-agent"
+  "default_agent": "main-agent",
+  "disabled_providers": ["alibaba"],
+  "provider": {
+    "nvidia": {
+      "whitelist": ["meta/muse-glimmer-30b"],
+      "models": {
+        "meta/muse-glimmer-30b": {
+          "id": "meta/muse-glimmer-30b",
+          "name": "Muse Glimmer 30B",
+          "family": "muse-glimmer",
+          "release_date": "2026-08-10",
+          "reasoning": true,
+          "temperature": true,
+          "tool_call": true,
+          "attachment": true,
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "limit": {
+            "context": 131072,
+            "output": 32768
+          }
+        }
+      }
+    }
+  }
 }
