@@ -172,13 +172,12 @@ optimization, refactoring, and visual verification.
    MODE: QC
    SCREENSHOTS: <ALL paths from qa/ — the complete current set>
    FEATURE & BRIEF: <what was built + the step's acceptance criteria>
-   CODE PATHS: <changed files, so it can tie flaws to exact lines>
    DESIGN LANGUAGE: <condensed from AGENTS.md + loaded skills: palette,
    typography, spacing, platform idiom>
    SPECIFIC CONCERNS: <anything you are unsure about — the design-direction
    check from Step 0, a risky interaction, a pattern you improvised>
-   REMINDER: Report everything you see — no minimum threshold, nothing left
-   out of the output.
+   REMINDER: Image-only review — never read code or files. Report everything
+   you see in maximum detail — no minimum threshold, nothing left out.
    ```
 
    THEN call @glimmer-qc in DESIGN QC mode with the SAME full set (its
@@ -190,8 +189,9 @@ optimization, refactoring, and visual verification.
    SCREENSHOTS: <ALL paths from qa/ — the complete current set>
    PRODUCT BRIEF: <what the app is and who it is for>
    DESIGN LANGUAGE: <condensed from AGENTS.md + loaded skills>
-   REMINDER: Review every screenshot — this is a batch review, nothing is
-   skipped. Slop audit + UI/UX quality + differentiation, report everything.
+   REMINDER: Image-only review — never read code or files. Review every
+   screenshot in maximum detail — nothing is skipped. Slop audit + UI/UX
+   quality + differentiation, report everything.
    ```
 
    Division of labor — do NOT ask them to review each other's areas: mimo-eyes
@@ -246,7 +246,8 @@ optimization, refactoring, and visual verification.
    SCREENSHOTS: <ALL paths from qa/ — every screen/state>
    PRODUCT BRIEF: <what the app is and who it is for>
    DESIGN LANGUAGE: <condensed from AGENTS.md + loaded skills>
-   REMINDER: Evaluate the whole app as one system. Report everything you see —
+   REMINDER: Image-only review — never read code or files. Evaluate the whole
+   app as one system in maximum detail. Report everything you see —
    consistency audit across all screens, then prioritized UI/UX improvements.
    This is NOT bug QC — QC was already done per-step.
    ```
@@ -259,9 +260,10 @@ optimization, refactoring, and visual verification.
    SCREENSHOTS: <ALL paths from qa/ — every screen/state>
    PRODUCT BRIEF: <what the app is and who it is for>
    DESIGN LANGUAGE: <condensed from AGENTS.md + loaded skills>
-   REMINDER: Review every screenshot in this batch — nothing is skipped.
-   Slop audit + design quality verdict + differentiation recommendations
-   across the whole app as one system.
+   REMINDER: Image-only review — never read code or files. Review every
+   screenshot in this batch in maximum detail — nothing is skipped. Slop
+   audit + design quality verdict + differentiation recommendations across
+   the whole app as one system.
    ```
 
    mimo-eyes evaluates the whole experience across screens (consistency
