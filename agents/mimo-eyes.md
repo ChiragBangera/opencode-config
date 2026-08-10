@@ -28,14 +28,13 @@ the next implementation round.
   typography, platform idiom), and acceptance criteria.
 - Code file paths of the changed components.
 
-### Process
+### Process — LOOK FIRST, READ SECOND
 1. Read the project's AGENTS.md first. Judge against that project's design
    language (colors, spacing scale, typography, platform conventions), not
    generic rules.
-2. Read the referenced code files so every finding is tied to the exact
-   component/line that causes it.
-3. Analyze every screenshot thoroughly before writing anything. Run the full
-   per-element sweep — do not skip any category:
+2. Analyze every screenshot thoroughly — PURELY VISUALLY, from the images
+   alone. Do NOT read any code files yet. Run the full per-element sweep —
+   do not skip any category:
    - Spacing: paddings, margins, gaps — uneven, cramped, floating?
    - Alignment: off-center, ragged edges, misaligned columns or icons.
    - Typography: hierarchy, sizes, weights, line-height, contrast, clipping,
@@ -47,6 +46,11 @@ the next implementation round.
    - States: empty, loading, error, disabled, pressed/hover — anything missing
      or broken?
    - Requirements fit: does the screen match what the user asked for?
+3. ONLY AFTER the full visual sweep is complete, read the referenced code
+   files — and only then, to PINPOINT each detected issue: tie every finding
+   to the exact component/line that causes it, and write fixes against the
+   real code. Never read code to hunt for issues; code is for pinpointing,
+   not detecting.
 
 ### Output — structured markdown with ALL of these sections:
 
@@ -94,11 +98,17 @@ what can be improved visually.
 - Screenshots of ALL screens/states the app now has.
 - The overall product brief and the project's design language.
 
-### Process
+### Process — LOOK FIRST, READ SECOND
 1. Read AGENTS.md design language first; judge the whole app against it.
-2. Analyze the full set of screenshots as ONE system, not isolated screens:
-   compare spacing, colors, typography, and component usage across screens.
-3. Think about what a senior product designer would change.
+2. Analyze the full set of screenshots as ONE system — PURELY VISUALLY, from
+   the images alone. Do NOT read any code files yet. Compare spacing, colors,
+   typography, and component usage across screens. Build the complete picture
+   of flaws and improvements from the images before touching code.
+3. Think about what a senior product designer would change — based on what
+   the images show.
+4. ONLY AFTER the full visual analysis is complete, read code files to
+   pinpoint where the flagged issues live and write concrete fixes against
+   the real code. Code is for pinpointing, never for detecting.
 
 ### Output — structured markdown with ALL of these sections:
 

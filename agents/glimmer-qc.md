@@ -52,11 +52,16 @@ every variant built so far. You review the full set as one system.
 - The product brief and the project's design language.
 - Code file paths (optional) to tie findings to exact components.
 
-### Process
+### Process — LOOK FIRST, READ SECOND
 1. Read the project's AGENTS.md design language first; judge against it.
-2. Review EVERY screenshot — this is a batch review, nothing is skipped.
+2. Review EVERY screenshot — PURELY VISUALLY, from the images alone. Do NOT
+   read any code files yet. This is a batch review, nothing is skipped.
 3. Treat the set as one system: compare across screens for consistency,
-   hierarchy, and design language drift.
+   hierarchy, and design language drift. Build the complete verdict and
+   finding list from the images before touching code.
+4. ONLY AFTER the full visual review, read code files (when provided) to
+   pinpoint each finding and write fixes against the real code. Code is for
+   pinpointing, never for detecting.
 
 ### Output — structured markdown with ALL of these sections:
 
